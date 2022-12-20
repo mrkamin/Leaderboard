@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrkamin/to-do-list.git"
+    "url": "https://github.com/mrkamin/Leaderboard"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mrkamin/to-do-list/issues"
+    "url": "https://github.com/mrkamin/Leaderboard/issues"
   },
-  "homepage": "https://github.com/mrkamin/to-do-list#readme",
+  "homepage": "https://github.com/mrkamin/Leaderboard/blob/dev/README.md",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.2",

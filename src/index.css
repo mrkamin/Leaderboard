@@ -110,7 +110,7 @@ body {
   justify-content: center;
 }
 
-.sect__one__cont__item1 { 
+.sect__one__cont__item1 {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -118,8 +118,8 @@ body {
 }
 
 .sect__one__cont__item1 h2 {
-    font-size: 13px;
-    font-weight: bolder;
+  font-size: 13px;
+  font-weight: bolder;
 }
 
 .sect__one__cont__item1__item1 {
@@ -160,7 +160,7 @@ body {
 }
 
 .sect__one__cont__item2 h2 {
-font-size: 18.5px;
+  font-size: 18.5px;
 }
 
 .sect__one__cont__item2 form {
@@ -180,96 +180,96 @@ font-size: 18.5px;
 }
 
 @media screen and (min-width: 786px) {
-    body {
-        display: flex;
-        justify-content: center;
-    }
+  body {
+    display: flex;
+    justify-content: center;
+  }
 
-    .sect__one {
-        background-color: var(--C-BASIC-LIGHT-FADE);
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        box-shadow: var(--SHADOW);
-        width: 80%;
-        margin: 5px;
-        padding: 10px;
-        margin-top: 140px;
-      }
-      
-      .sect__one__cont {
-        display: grid;
-        grid-template-columns: 45% 40%;
-        gap: 2px;
-        justify-content: center;
-      }
-      
-      .sect__one__cont__item1 { 
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-      }
-      
-      .sect__one__cont__item1 h2 {
-          font-size: 30px;
-      }
-      
-      .sect__one__cont__item1__item1 {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-      }
-      
-      .sect__one__cont__item1__item1 button {
-        padding: 3px;
-        margin: 5px;
-        border: none;
-        border-radius: 0.3rem;
-        box-shadow: var(--SHADOW);
-        font-weight: bolder;
-        width: 70px;
-        font-size: medium;
-      }
-      
-      .sect__one__cont__item1__item2 {
-        border: var(--BORDERS);
-        margin-bottom: 16px;
-        width: 100%;
-        border-radius: 0.2rem;
-        padding: 5px;
-      }
-      
-      .par {
-        background-color: var(--C-LIGHT);
-      }
-      
-      .sect__one__cont__item2 {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        padding: 5px;
-        align-items: center;
-      }
-      
-      .sect__one__cont__item2 h2 {
-      font-size: 24.5px;
-      }
-      
-      .sect__one__cont__item2 form {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      
-      .sect__one__cont__item2 button {
-        box-shadow: var(--SHADOW);
-        padding: 3px;
-        font-weight: bolder;
-        border: none;
-        border-radius: 0.2rem;
-        margin: 5px;
-        margin-left: 120px;
-      }  
+  .sect__one {
+    background-color: var(--C-BASIC-LIGHT-FADE);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: var(--SHADOW);
+    width: 80%;
+    margin: 5px;
+    padding: 10px;
+    margin-top: 140px;
+  }
+
+  .sect__one__cont {
+    display: grid;
+    grid-template-columns: 45% 40%;
+    gap: 2px;
+    justify-content: center;
+  }
+
+  .sect__one__cont__item1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .sect__one__cont__item1 h2 {
+    font-size: 30px;
+  }
+
+  .sect__one__cont__item1__item1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sect__one__cont__item1__item1 button {
+    padding: 3px;
+    margin: 5px;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: var(--SHADOW);
+    font-weight: bolder;
+    width: 70px;
+    font-size: medium;
+  }
+
+  .sect__one__cont__item1__item2 {
+    border: var(--BORDERS);
+    margin-bottom: 16px;
+    width: 100%;
+    border-radius: 0.2rem;
+    padding: 5px;
+  }
+
+  .par {
+    background-color: var(--C-LIGHT);
+  }
+
+  .sect__one__cont__item2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 5px;
+    align-items: center;
+  }
+
+  .sect__one__cont__item2 h2 {
+    font-size: 24.5px;
+  }
+
+  .sect__one__cont__item2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sect__one__cont__item2 button {
+    box-shadow: var(--SHADOW);
+    padding: 3px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 5px;
+    margin-left: 120px;
+  }
 }
