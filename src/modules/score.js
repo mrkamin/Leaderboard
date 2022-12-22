@@ -1,4 +1,3 @@
-
 import { newScoreList } from './varibles.js';
 
 export const showScores = ({ user, score }) => {
@@ -13,7 +12,7 @@ export const showScores = ({ user, score }) => {
 
 export const getAllMyGameScores = async () => {
   try {
-    const rest = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/`);
+    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/');
     const myData = await rest.json();
 
     if (!rest.ok) {
@@ -35,7 +34,7 @@ export const getAllMyGameScores = async () => {
 
 export const addMyNewScore = async (myNewScore) => {
   try {
-    const rest = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/`, {
+    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

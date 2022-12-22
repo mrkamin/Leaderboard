@@ -1,5 +1,5 @@
 import './index.css';
-import { addMyNewScore, getAllMyGameScores } from './modules/score';
+import { addMyNewScore, getAllMyGameScores } from './modules/score.js';
 import { newScoreForm, newRefBtn } from './modules/varibles.js';
 
 newScoreForm.addEventListener('submit', (event) => {
