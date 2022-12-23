@@ -47,7 +47,6 @@ export const addMyNewScore = async (myNewScore) => {
       return myData;
     }
 
-    
     return myData;
   } catch (error) {
     return error;
