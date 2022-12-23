@@ -1,10 +1,11 @@
-import { newScoreList } from './varibles.js';
+import { newScoreList, apiEndpoint , apiGameUrl } from './varibles.js';
+import { displayFeeback } from './feedback.js';
 
 export const showScores = ({ user, score }) => {
   const myelement = document.createElement('div');
-  myelement.className = 'score__item';
+  myelement.className = 'score__item__par';
   myelement.innerHTML = `
-  <i class="fa-solid fa-user-tie"></i><p class="name">${user}</p><p class="score">${score}</p>
+  <div class="score__item"><i class="fa-solid fa-user-tie"></i><p class="name">${user}</p><p class="score">${score}</p></div>
     `;
 
   return myelement;
@@ -12,7 +13,7 @@ export const showScores = ({ user, score }) => {
 
 export const getAllMyGameScores = async () => {
   try {
-    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/');
+    const rest = await fetch(apiEndpoint);
     const myData = await rest.json();
 
     if (!rest.ok) {
@@ -34,7 +35,7 @@ export const getAllMyGameScores = async () => {
 
 export const addMyNewScore = async (myNewScore) => {
   try {
-    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/', {
+    const rest = await fetch(apiEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,10 +45,10 @@ export const addMyNewScore = async (myNewScore) => {
     const myData = await rest.json();
 
     if (!rest.ok) {
+      displayFeeback(myData.message);
       return myData;
     }
-
-    getAllMyGameScores();
+    displayFeeback(myData.result)
     return myData;
   } catch (error) {
     return error;
@@ -60,7 +61,7 @@ export const createMyNewGame = async () => {
   };
 
   try {
-    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+    const rest = await fetch(apiGameUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
