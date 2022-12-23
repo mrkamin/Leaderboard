@@ -1,4 +1,4 @@
-import { newScoreList, apiEndpoint , apiGameUrl } from './varibles.js';
+import { newScoreList, apiEndpoint, apiGameUrl } from './varibles.js';
 import { displayFeeback } from './feedback.js';
 
 export const showScores = ({ user, score }) => {
@@ -48,7 +48,7 @@ export const addMyNewScore = async (myNewScore) => {
       displayFeeback(myData.message);
       return myData;
     }
-    displayFeeback(myData.result)
+    displayFeeback(myData.result);
     return myData;
   } catch (error) {
     return error;

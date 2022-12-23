@@ -212,7 +212,7 @@ footer {
   height: 40px;
 }
 
-.success__massege{
+.success__massege {
   color: var(--HERO-BGCOLOR);
   align-self: center;
   font-style: italic;
