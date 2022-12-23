@@ -1,4 +1,4 @@
-import { newScoreList } from './varibles.js';
+import { newScoreList, apiEndpoint, apiGameUrl } from './varibles.js';
 
 export const showScores = ({ user, score }) => {
   const myelement = document.createElement('div');
@@ -12,7 +12,7 @@ export const showScores = ({ user, score }) => {
 
 export const getAllMyGameScores = async () => {
   try {
-    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/');
+    const rest = await fetch(apiEndpoint);
     const myData = await rest.json();
 
     if (!rest.ok) {
@@ -34,7 +34,7 @@ export const getAllMyGameScores = async () => {
 
 export const addMyNewScore = async (myNewScore) => {
   try {
-    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/k9qDo2edCBNPllUNNxCr/scores/', {
+    const rest = await fetch(apiEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const addMyNewScore = async (myNewScore) => {
       return myData;
     }
 
-    getAllMyGameScores();
+    
     return myData;
   } catch (error) {
     return error;
@@ -60,7 +60,7 @@ export const createMyNewGame = async () => {
   };
 
   try {
-    const rest = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+    const rest = await fetch(apiGameUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
