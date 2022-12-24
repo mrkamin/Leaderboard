@@ -91,12 +91,17 @@ body {
   background-color: var(--BODY-BGCOLOR);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--C-BLUE);
   font-style: italic;
 }
 
- .sect__one {
+.sect__one {
   background-image: var(--BG-IMAGE-TWO);
   display: flex;
   flex-direction: column;
@@ -186,6 +191,7 @@ form input {
   padding: 5px;
   box-shadow: var(--SHADOW);
 }
+
 .sect__one__cont__item2 button {
   padding: 5px;
   border: none;
@@ -194,7 +200,7 @@ form input {
   font-weight: bolder;
   width: 60px;
   margin-left: 80px;
-} 
+}
 
 .score__item__par:nth-child(even) {
   background-color: var(--C-BASIC-LIGHT);
@@ -245,7 +251,12 @@ footer {
 }
 
 @media screen and (min-width: 786px) {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--C-DARK);
     font-style: italic;
   }
