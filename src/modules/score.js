@@ -1,10 +1,11 @@
 import { newScoreList, apiEndpoint, apiGameUrl } from './varibles.js';
+import { displayFeeback } from './feedback.js';
 
 export const showScores = ({ user, score }) => {
   const myelement = document.createElement('div');
-  myelement.className = 'score__item';
+  myelement.className = 'score__item__par';
   myelement.innerHTML = `
-  <i class="fa-solid fa-user-tie"></i><p class="name">${user}</p><p class="score">${score}</p>
+  <div class="score__item"><i class="fa-solid fa-user-tie"></i><p class="name">${user}</p><p class="score">${score}</p></div>
     `;
 
   return myelement;
@@ -44,9 +45,11 @@ export const addMyNewScore = async (myNewScore) => {
     const myData = await rest.json();
 
     if (!rest.ok) {
+      displayFeeback(myData.message);
       return myData;
     }
-
+    
+    displayFeeback(myData.result);
     return myData;
   } catch (error) {
     return error;
