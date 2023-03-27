@@ -48,6 +48,7 @@ export const addMyNewScore = async (myNewScore) => {
       displayFeeback(myData.message);
       return myData;
     }
+
     displayFeeback(myData.result);
     return myData;
   } catch (error) {
